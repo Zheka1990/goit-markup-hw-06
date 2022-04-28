@@ -835,7 +835,7 @@ height: 20px;
 }
 
 .modal{
-position: relative;
+position: absolute;
 top: 50%;
 left: 50%;
 transform: scaleY(1);
@@ -850,32 +850,25 @@ border-radius: 4px;
 animation: animate125 3000ms infinite 1000ms;
 }
 
-.modal::before {
-    content: "";
-    transform: scale(1.25);
-}
+
 
 .close-btn {
-    position: absolute;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    border:  1px solid #0000001a;
+   position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #fff;
     width: 30px;
     height: 30px;
-    border-radius: 50%; 
-    background-color: var(--background-color);  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
+    
 
-.modal>.close-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 0;
-    margin-top: 8px;
-    margin-right: 8px;
-}
+
 /* Форма футера */
  .form-footer{
     margin-left: 93px;
@@ -891,7 +884,6 @@ animation: animate125 3000ms infinite 1000ms;
     text-transform: uppercase;
 
     color: #FFFFFF;
-    margin-top: 12px;
     margin-bottom: 20px;
 }
 .from-footer-field{
@@ -931,8 +923,7 @@ animation: animate125 3000ms infinite 1000ms;
 }
 /* Форма модалки */
 .form{
-    margin-right: 40px;
-    margin-left: 40px;
+    padding: 40px;
 }
 .title-form{
     font-family: 'Roboto';
@@ -945,8 +936,8 @@ animation: animate125 3000ms infinite 1000ms;
 
     color: #212121;
 
-    padding-top: 40px;
-    padding-bottom: 12px;
+    
+    margin-bottom: 12px;
 }
 .from-field{
     display: flex;
@@ -1018,6 +1009,11 @@ textarea {
     margin-right: auto;
     margin-left: auto;
     transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
 }
 .form-button:hover{
     background: #188CE8;
@@ -1108,18 +1104,26 @@ textarea {
 .close-btn:hover{
     color: var(--accent-text-color);
 }
-.close-btn{
-    padding: 0;
-    border-radius: 50%;
-    background-color: #fff;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
+
+
 .icon-button-svg:hover{
     fill: var(--accent-text-color);
     transition: fill var(--anim-fast);
+}
+.from-field:nth-child(5){
+    margin-bottom: 0px;
+}
+.adress{
+    flex-grow: 1;
+}
+.from-field label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: 
+#757575;
+    margin-bottom: 4px;
 }
